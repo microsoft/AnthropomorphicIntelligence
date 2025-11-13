@@ -1,0 +1,8 @@
+[
+  {
+    "model": "gpt-4o",
+    "api_key":"",
+    "authentication": "Api Key Authentication"
+  }
+]
+
