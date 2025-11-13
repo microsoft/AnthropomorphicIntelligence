@@ -63,6 +63,19 @@ This repository gathers and develops various techniques that contribute toward t
 
 ---
 
+
+### 3. [SocialCC: Interactive Evaluation for Cultural Competence in Language Agents](./SocialCC/README.md)
+
+**SocialCC**  is a novel benchmark designed to evaluate cultural competence through multi-turn interactive intercultural scenarios. It comprises 3,060 human-written scenarios spanning 60 countries across six continents. Through extensive experiments on eight prominent LLMs, our findings reveal a significant gap between the cultural knowledge stored in these models and their ability to apply it effectively in cross-cultural communication.
+
+**Key Features:**
+* 3,060 diverse intercultural scenarios spanning 60 countries across six continents.
+* Three core evaluation dimensions: cultural awareness, cultural knowledge, and cultural behaviour.
+* Interactive multi-turn assessment that measures cultural competence in dynamic, context-rich social interactions.
+* Comprehensive cross-model analysis identifying misinterpretation of implicit cultural cues and inconsistent handling of value conflictss.
+
+---
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
