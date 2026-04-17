@@ -4,7 +4,7 @@ langchain==0.1.11
 langchain-community==0.0.27
 langchain-core==0.1.46
 langchain-experimental==0.0.53
-langchain-openai==0.1.1
+langchain-openai==1.1.14
 numpy>=1.24.0
 openai==1.55.3
 pandas>=2.0.3
