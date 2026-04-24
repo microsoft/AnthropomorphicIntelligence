@@ -20,7 +20,7 @@
     - [1. Quick Start](#1-quick-start)
     - [2. Model Training](#2-model-training)
     - [3. Dataset Build](#3-dataset-build)
-  <!-- - [📝 Citation](#-citation) -->
+  - [📝 Citation](#-citation)
   - [📄 Contact](#-contact)
 
 ---
@@ -158,21 +158,22 @@ python aigc-text-bank/ai_polish/polish.py \
     --model_name "gpt-4o" \
     --base_url "https://api.openai.com/v1"
 ```
-<!-- 
----
 
 ## 📝 Citation
 
 If you find our paper, dataset, or code useful, please consider citing our work:
 
 ```bibtex
-@inproceedings{anonymous2025reveal,
-  title={Reasoning-Aware AIGC Detection via Alignment and Reinforcement},
-  author={Anonymous Authors},
-  booktitle={Submission to the Association for Computational Linguistics (ACL)},
-  year={2025}
+@misc{wang2026reasoningawareaigcdetectionalignment,
+      title={Reasoning-Aware AIGC Detection via Alignment and Reinforcement}, 
+      author={Zhao Wang and Max Xiong and Jianxun Lian and Zhicheng Dou},
+      year={2026},
+      eprint={2604.19172},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2604.19172}, 
 }
-``` -->
+```
 
 ---
 
