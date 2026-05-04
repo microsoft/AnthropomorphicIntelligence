@@ -445,6 +445,9 @@ The final data format used for training is as follow:
 }
 ```
 
+## Offline Evaluation
+Refer to this [repository](https://github.com/Kelvin-ywc/proactvl_vlmevalkit) for offline video understanding evaluation, featuring benchmarks on datasets such as `VideoMME`, `LongVideoBench`, and `MVBench`.
+
 ## Related Projects
 - [VideoLLM-online](https://github.com/showlab/videollm-online)
 - [StreamMind](https://github.com/xinding-sys/StreamMind)
