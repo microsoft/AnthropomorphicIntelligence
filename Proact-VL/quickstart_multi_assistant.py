@@ -8,7 +8,7 @@ and is restricted from public distribution.
 Please send an email to the authors for a private share
 of the model checkpoints.
 """
-ckpt_path = ''
+ckpt_path = 'oaaoaa/proactvl_base_qwen3vl'
 model_config = None
 infer_config = {
     'max_kv_tokens': 16384,
