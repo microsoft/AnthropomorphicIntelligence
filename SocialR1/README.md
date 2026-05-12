@@ -4,7 +4,6 @@
 <a href="https://huggingface.co/datasets/Jincenzi/ToMBench_Hard" target="_blank"><img alt="Dataset" src="https://img.shields.io/badge/🤗 Dataset-8e44ad?color=8e44ad" /></a>
 <a href="https://huggingface.co/Jincenzi/SocialR1-4B" target="_blank"><img alt="SocialR1-4B" src="https://img.shields.io/badge/🤗 SocialR1--4B-2980b9?color=2980b9" /></a>
 <a href="https://huggingface.co/Jincenzi/SocialR1_8B" target="_blank"><img alt="SocialR1-8B" src="https://img.shields.io/badge/🤗 SocialR1--8B-2980b9?color=2980b9" /></a>
-<a href="https://huggingface.co/Jincenzi/SocialR1-Llama3.1-8B" target="_blank"><img alt="SocialR1-Llama3.1-8B" src="https://img.shields.io/badge/🤗 SocialR1--Llama3.1--8B-2980b9?color=2980b9" /></a>
 
 ![Social-R1](asset/socialr1.png)
 
@@ -20,16 +19,15 @@ While LLMs achieve strong performance on social reasoning benchmarks, they often
 - 📊 **Comprehensive Evaluation**: Validated across three complementary settings — static MCQ (8 benchmarks including ToMBench, ToMBench-Hard, SocialIQA, SimpleToM, EmoBench, MotiveBench, Hi-ToM, TactfulToM), open-ended generation ([FanToM](https://arxiv.org/abs/2310.15421)), and interactive social intelligence ([SOTOPIA](https://arxiv.org/abs/2310.11667))
 - 📈 **Process-Level Social Alignment**: Empirical evidence that aligning intermediate social reasoning processes promotes more faithful inference beyond output-only optimisation
 
-## 📢 News
-- **[2026.05.11]** 🎉 Social-R1 paper accepted to **NeurIPS 2026**! Paper updated with new results.
-- **[2026.05.11]** 🎉 Model checkpoints released: [SocialR1-4B](https://huggingface.co/Jincenzi/SocialR1-4B) | [SocialR1-8B](https://huggingface.co/Jincenzi/SocialR1_8B) | [SocialR1-Llama3.1-8B](https://huggingface.co/Jincenzi/SocialR1-Llama3.1-8B)
+## 📢 News 
+- **[2026.05.11]** 🎉 Model checkpoints released: [SocialR1-4B](https://huggingface.co/Jincenzi/SocialR1-4B) | [SocialR1-8B](https://huggingface.co/Jincenzi/SocialR1_8B)  
 - **[2026.03.10]** 🎉 Social-R1 paper released on arXiv!
 
 ## TODO List
 - [x] Release the paper.
 - [x] Release ToMBench-Hard evaluation set.
 - [x] Release training and evaluation code.
-- [x] Release model checkpoints (SocialR1-4B, SocialR1-8B, SocialR1-Llama3.1-8B).
+- [x] Release model checkpoints (SocialR1-4B, SocialR1-8B).
 
 
 ## Installation
@@ -110,7 +108,7 @@ SocialR1/
 @inproceedings{wu2026socialr1,
   title={Social-R1: Enhancing Social Reasoning in LLMs through Trajectory-Level Reinforcement Learning},
   author={Wu, Jincenzi and Lei, Yuxuan and Lian, Jianxun and Huang, Yitian and Zhou, Lexin and Li, Haotian and Yang, Deng and Xie, Xing and Meng, Helen},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  booktitle={Arxiv},
   year={2026}
 }
 ```
