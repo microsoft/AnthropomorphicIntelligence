@@ -84,6 +84,10 @@ class CompanionTrainingArguments(TrainingArguments):
         default="strategy1",
         metadata={"help": "Finetuning strategy: strategy1, strategy2 or strategy3."}
     )
+    loss_active_scale: float = field(
+        default=1.0,
+        metadata={"help": "Scale the loss for active state."}
+    )
     # train_audio
 
 
@@ -103,10 +107,6 @@ class CompanionModelArguments:
     state_threshold: float = field(
         default=0.5,
         metadata={"help": "Threshold to decide the active state."}
-    )
-    loss_active_scale: float = field(
-        default=1.0,
-        metadata={"help": "Scale the loss for active state."}
     )
     add_special_tokens: bool = field(
         default=False,

@@ -445,6 +445,33 @@ The final data format used for training is as follow:
 }
 ```
 
+## Offline Model Label Construction
+We use offline models to construct two kinds of labels: **caption** and **interleave response**. We provide code that calls the client via OpenRouter to generate the data.
+
+```
+export OPENROUTER_API_KEY='your_api_key'
+```
+
+Caption:
+```
+python -m evaluation.gaming.distributed_generate_gaming_caption \
+    --model_name_or_path openai/gpt-4o-2024-11-20 \
+    --game_list baldurs_gate_3 black_myth_wukong csgo cyberpunk_2077 ego4d elden_ring lol minecraft starcraft2 streetfighter6 tears_of_the_kingdom yu_gi_oh \
+    --test_name all_in_one \
+    --num_workers 1 \
+    --output_dir ./results/baseline
+```
+
+Interleave response:
+```
+python -m evaluation.gaming.distributed_generate_gaming_interleave \
+    --model_name_or_path openai/gpt-4o-2024-11-20 \
+    --game_list baldurs_gate_3 black_myth_wukong csgo cyberpunk_2077 ego4d elden_ring lol minecraft starcraft2 streetfighter6 tears_of_the_kingdom yu_gi_oh \
+    --test_name all_in_one \
+    --num_workers 1 \
+    --output_dir ./results/baseline
+```
+
 ## Offline Evaluation
 Refer to this [repository](https://github.com/Kelvin-ywc/proactvl_vlmevalkit) for offline video understanding evaluation, featuring benchmarks on datasets such as `VideoMME`, `LongVideoBench`, and `MVBench`.
 
@@ -460,11 +487,13 @@ Refer to this [repository](https://github.com/Kelvin-ywc/proactvl_vlmevalkit) fo
 
 ## Citation
 ```BibTeX
-@article{yan2026proact,
-  title={Proact-VL: A Proactive VideoLLM for Real-Time AI Companions},
-  author={Yan, Weicai and Dai, Yuhong and Ran, Qi and Li, Haodong and Lin, Wang and Liao, Hao and Xie, Xing and Jin, Tao and Lian, Jianxun},
-  journal={arXiv preprint arXiv:2603.03447},
-  year={2026}
+@inproceedings{
+yan2026proactvl,
+title={Proact-{VL}: A Proactive Video{LLM} for Real-Time {AI} Companions},
+author={Weicai Yan and Yuhong Dai and Qi Ran and Haodong Li and Wang Lin and Tao Jin and Xing Xie and Hao Liao and Jianxun Lian},
+booktitle={Forty-third International Conference on Machine Learning},
+year={2026},
+url={https://openreview.net/forum?id=k9PKgV0L4C}
 }
 ```
 

@@ -1,6 +1,33 @@
 
+import base64
+import io
+
 import torch
+from PIL import Image
 from typing import Optional, List, Dict, Any, Union, Iterable, Tuple
+
+
+def frame_to_base64(frame, format: str = "JPEG") -> str:
+    """Encode a single video frame into a base64 string (no data-uri prefix).
+
+    Accepts a ``PIL.Image`` or a ``torch.Tensor`` shaped ``[C, H, W]`` as
+    returned by ``qwen_omni_utils`` ``fetch_video``.
+    """
+    if isinstance(frame, torch.Tensor):
+        arr = frame.detach().cpu()
+        if arr.dtype != torch.uint8:
+            arr = arr.clamp(0, 255).to(torch.uint8)
+        # [C, H, W] -> [H, W, C]
+        arr = arr.permute(1, 2, 0).numpy()
+        image = Image.fromarray(arr).convert("RGB")
+    elif isinstance(frame, Image.Image):
+        image = frame.convert("RGB")
+    else:
+        raise TypeError(f"Unsupported frame type for base64 encoding: {type(frame)}")
+
+    buffer = io.BytesIO()
+    image.save(buffer, format=format)
+    return base64.b64encode(buffer.getvalue()).decode("utf-8")
 
 
 def _split_words(text: str) -> List[str]:
