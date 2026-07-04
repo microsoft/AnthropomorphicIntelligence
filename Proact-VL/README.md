@@ -445,7 +445,7 @@ The final data format used for training is as follow:
 }
 ```
 
-## Offline Model Label Construction
+## Offline Model Inference
 We use offline models to construct two kinds of labels: **caption** and **interleave response**. We provide code that calls the client via OpenRouter to generate the data.
 
 ```
