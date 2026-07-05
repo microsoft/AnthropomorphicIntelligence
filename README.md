@@ -19,6 +19,7 @@
     - [5. PersonaArena: Role-Play Simulation and Evaluation](#5-personaarena-role-play-simulation-and-evaluation)
     - [6. HumanLLM: Towards Personalized Understanding and Simulation of Human Nature](#6-humanllm-towards-personalized-understanding-and-simulation-of-human-nature)
     - [7. Proact-VL: A Proactive VideoLLM for Real-Time AI Companions](#7-proact-vl-a-proactive-videollm-for-real-time-ai-companions)
+    - [8. Social-R1: Towards Human-like Social Reasoning in LLMs](#8-social-r1-towards-human-like-social-reasoning-in-llms)
   - [Contributing](#contributing)
   - [Trademarks](#trademarks)
   - [Privacy](#privacy)
@@ -135,6 +136,20 @@ This repository gathers and develops various techniques that contribute toward t
 - **Proactive Understanding**: Goes beyond reactive responses to provide contextual insights
 - **Flexible Architecture**: Built on multiple backbone models (Qwen2-VL, Qwen2.5-VL, Qwen3-VL)
 - **Comprehensive Evaluation**: Includes gaming scenario evaluation with LLM-based judging
+
+---
+
+### 8. [Social-R1: Enhancing Social Reasoning in LLMs through Trajectory-Level Reinforcement Learning](https://github.com/jincenziwu/SocialR1)
+
+**Social-R1** is a reinforcement learning framework that aligns LLM reasoning at the trajectory level for human-like social reasoning. It identifies two core failure modes—**Reasoning Parasitism** (models prematurely anchor on answer options and construct post-hoc justifications) and the **Interpretation Bottleneck** (models fail to map social cues to latent mental states)—and addresses them through multi-dimensional rewards inspired by Social Information Processing (SIP) theory. Combined with **ToMBench-Hard**, a challenging Theory-of-Mind dataset with 800 expert-annotated adversarial questions, Social-R1 enables smaller models to match or outperform substantially larger baselines across static, generative, and interactive evaluation settings.
+
+**Key Features:**
+
+* ToMBench-Hard Benchmark: 800 expert-annotated adversarial questions covering six Theory-of-Mind dimensions
+* Multi-dimensional reward system with SIP structural reward, SIP content reward, inference efficiency, and curriculum-style weighting
+* SIP-guided reasoning enforcing stage-consistent social inference (Cue Encoding → Cue Interpretation → Goal Clarification → Response Generation) 
+* Cross-family generalisation across Qwen3-4B, Qwen3-8B, and Llama-3.1-8B-Instruct
+* Comprehensive evaluation across static MCQ (8 benchmarks), open-ended generation (FanToM), and interactive social intelligence (SOTOPIA)
 
 ## Contributing
 
