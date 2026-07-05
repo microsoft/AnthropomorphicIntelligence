@@ -186,7 +186,7 @@ class ProActTrainer(Trainer):
         )
 
         outputs['main_loss'] = torch.zeros((), device=active_logits.device, dtype=active_logits.dtype)
-        outputs['active_loss'] = active_loss * model.loss_active_scale
+        outputs['active_loss'] = active_loss * self.args.loss_active_scale
         loss = active_loss
         outputs['loss'] = active_loss
         return (loss, outputs) if return_outputs else loss
@@ -220,7 +220,7 @@ class ProActTrainer(Trainer):
         # else:
         #     outputs['main_loss'] = outputs['loss']
         outputs['main_loss'] = outputs['loss']
-        outputs['active_loss'] = active_loss * model.loss_active_scale
+        outputs['active_loss'] = active_loss * self.args.loss_active_scale
         loss = outputs['main_loss'] + outputs['active_loss']
         outputs['loss'] = loss
         self.log({
